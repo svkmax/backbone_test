@@ -4,7 +4,8 @@ class BackboneTest.Views.Posts.EditView extends Backbone.View
   template: JST["backbone/templates/posts/edit"]
 
   events:
-    "submit #edit-post": "update"
+    "submit #edit-post": "update",
+    "click .destroy" : "destroy"
 
   update: (e) ->
     e.preventDefault()
@@ -25,3 +26,9 @@ class BackboneTest.Views.Posts.EditView extends Backbone.View
     this.$("form").backboneLink(@model)
 
     return this
+
+  destroy: () ->
+    @model.destroy()
+    this.remove()
+    window.location.hash = "/index"
+    return false

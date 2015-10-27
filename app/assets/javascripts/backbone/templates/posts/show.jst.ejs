@@ -20,10 +20,10 @@
 									<span class="msg_item_icon msg_item_icon-edit"></span>
 								</div>
 								<div class="msg_item_content_header"><%= title %></div>
-								<div class="msg_item_content_info">Posted December, 6 2011 @ 5:30 PM b User</div>
+								<div class="msg_item_content_info"><%= new Date(created_at)%></div>
 							</div>
 						</div>
-						<div class="full_msg_content_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+						<div class="full_msg_content_text"><%= message %></div>
 						<div class="full_msg_content_btn">
 							<a href="#/<%= id %>/edit"><span class="msg_btn msg_btn-edit">Edit</span></a>
 						</div>

@@ -272,3 +272,11 @@
 .validation-error {
   color: red;
 }
+
+input[type=checkbox] {
+  /* All browsers except webkit*/
+  transform: scale(1.7);
+
+  /* Webkit browsers*/
+  -webkit-transform: scale(1.7);
+}

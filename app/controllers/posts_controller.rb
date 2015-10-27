@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_filter :set_post, only: [:update, :show]
+  before_filter :set_post, only: [:update, :show, :destroy]
 
   def index
     @posts = Post.all
