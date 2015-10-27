@@ -1,3 +1,266 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.main_wrapper {
+  padding: 10px;
+}
+.main_container  {
+  position: relative;
+  width: 100%;
+  background: white;
+  margin: 0 auto;
+}
+/*.main_container-limited {
+	width: 1024px;
+}*/
+
+
+.block {
+  margin: 0 0 35px 0;
+  font-family: Arial;
+}
+.block_header {
+  margin: 15px 0;
+  font-size: 26px;
+  font-weight: bold;
+  line-height: 52px;
+}
+
+.block_panel {
+  height: 30px;
+  padding: 10px 30px 10px 10px;
+  background: #4e4e4e;
+  border-radius: 10px;
+}
+.block_panel_part {}
+.block_panel_part-left {
+  float: left;
+}
+.block_panel_part-right {
+  float: right;
+}
+
+.block_panel_btn {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  border-radius: 5px;
+  background: #9d9d9d;
+  cursor: pointer;
+}
+.block_panel_btn_icon {
+  display: inline-block;
+  vertical-align: middle;
+  height: 20px;
+  width: 20px;
+  margin: 0 5px 0 0;
+  background-color: white;
+}
+.block_panel_btn_text {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.block_panel_link {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 30px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+.block_panel_link:hover {
+  text-decoration: underline;
+}
+
+.block_content {}
+
+
+.msg_list_block {}
+.msg_list {}
+.msg_item {
+  margin: 3px 0;
+  padding: 10px 0;
+  background: #f2f2f2;
+  border-radius: 10px;
+}
+.msg_item_content {
+  display: block;
+  position: relative;
+  margin: 0 60px;
+}
+.msg_item_edge {
+  position: absolute;
+  display: block;
+  top: 0;
+  width: 60px;
+  height: 40px;
+  text-align: center;
+}
+.msg_item_edge-left {
+  left: -60px;
+}
+.msg_item_edge-right {
+  right: -60px;
+}
+.msg_item_icon {
+  display: inline-block;
+  vertical-align: top;
+  width: 20px;
+  height: 20px;
+  margin: 10px 0 0 0;
+  background: #bbb;
+  cursor: pointer;
+}
+.msg_item_icon-edit {}
+.msg_item_icon-delete {}
+.msg_item_content_header {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: bold;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.msg_item_content_info {
+  font-size: 12px;
+  line-height: 18px;
+  color: #999;
+}
+
+
+.message_area {}
+.full_msg_content {
+  margin: 3px 0;
+  padding: 10px 0;
+  background: #f2f2f2;
+  border-radius: 10px;
+}
+.message_area .msg_item_content {
+  margin: 0 20px 0 60px;
+}
+.message_area .msg_item_content_header {
+  font-size: 16px;
+  line-height: 24px;
+}
+.message_area .msg_item_content_info {
+  font-size: 14px;
+  line-height: 22px;
+}
+.full_msg_content_heading {
+  padding: 10px 0;
+}
+.full_msg_content_text {
+  margin: 10px 20px;
+  padding: 20px 40px 0;
+  border-top: 1px dotted #bbb;
+  font-size: 14px;
+}
+.full_msg_content_btn {
+  padding: 10px 20px;
+  text-align: right;
+}
+.msg_btn {
+  display: inline-block;
+  padding: 5px 30px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: bold;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.msg_btn-edit {
+  background: #9d9d9d;
+}
+
+
+.form_block {}
+.msg_form {
+  margin: 3px 0;
+  padding: 10px 20px;
+  background: #f2f2f2;
+  border-radius: 10px;
+}
+.msg_form_heading {}
+.msg_form_header {
+  margin: 10px 0;
+  font-size: 16px;
+  line-height: 24px;
+}
+.msg_form_content {
+  padding: 20px 0 0;
+  border-top: 1px dotted #bbb;
+  font-size: 14px;
+}
+.msg_form_fields {}
+.msg_form_column {}
+.msg_form_column-left {
+  float: left;
+  width: 35%;
+  text-align: left;
+}
+.msg_form_column-right {
+  float: right;
+  width: 60%;
+}
+.msg_form_field {
+  display: block;
+  padding: 0 0 15px 0;
+}
+.msg_form_field_label {
+  display: block;
+  padding: 0 0 5px 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: #4e4e4e;
+}
+.msg_form_field_input {
+  display: block;
+  height: 24px;
+  width: 90%;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  line-height: 24px;
+  padding: 2px 5px;
+  outline: none;
+}
+.msg_form_field_text_error {
+  visibility: hidden;
+  color: #A00303;
+  font-size: 10px;
+}
+.msg_form_field_error {
+  border: 1px solid #A00303;
+  box-shadow: 0px 0px 5px 0px #A00303;
+}
+.msg_form_field_error-visible {
+  visibility: visible;
+}
+.msg_form_field_textarea {
+  display: block;
+  height: 110px;
+  width: 90%;
+  padding: 2px 5px;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  line-height: 24px;
+  resize: none;
+  outline: none;
+}
+.msg_form_btns {
+  padding: 10px 0;
+  text-align: right;
+}
+.msg_btn-submit {
+  background: #F3BE24;
+}
+.msg_btn-delete {
+  background: #BFBFBF;
+}
