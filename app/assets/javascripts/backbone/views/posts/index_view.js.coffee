@@ -11,7 +11,7 @@ class BackboneTest.Views.Posts.IndexView extends Backbone.View
 
   addOne: (post) =>
     view = new BackboneTest.Views.Posts.PostView({model : post})
-    @$(".block msg_list_block").append(view.render().el)
+    @$(".msg_list").append(view.render().el)
 
   render: =>
     @$el.html(@template(posts: @collection.toJSON() ))

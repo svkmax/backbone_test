@@ -1,26 +1,55 @@
-<h1>Edit post</h1>
+<div class="block msg_list_block" id="posts">
+				<h3 class="block_header">Viralheat Message Board</h3>
+				<div class="block_panel">
+					<div class="block_panel_part block_panel_part-left">
+						<span class="block_panel_btn">
+							<span class="block_panel_btn_icon"></span>
+							<a href="#/new"><span class="block_panel_btn_text">Post</span></a>
+						</span>
+					</div>
+					<div class="block_panel_part block_panel_part-right">
+						<span class="block_panel_link"><a href="#/index">List</a></span>
+					</div>
+				</div>
 
-<form id="edit-post" name="post">
-<div class="validation-error"></div>
-  <div class="field">
-    <label for="title"> title:</label>
-    <input type="text" name="title" id="title" value="<%= title %>" >
-  </div>
 
-  <div class="field">
-    <label for="name"> name:</label>
-    <input type="text" name="name" id="name" value="<%= name %>" >
-  </div>
-
-  <div class="field">
-    <label for="message"> message:</label>
-    <input type="text" name="message" id="message" value="<%= message %>" >
-  </div>
-
-  <div class="actions">
-    <input type="submit" value="Update Post" />
-  </div>
-
-</form>
-
-<a href="#/index">Back</a>
+<div class="block_content">
+					<div class="form_block">
+						<div class="msg_form">
+							<div class="msg_form_heading">
+								<h4 class="msg_form_header">Editing a Post</h4>
+							</div>
+							<div class="msg_form_content">
+								<form id="new-post" name="post">
+									<div class="msg_form_fields">
+										<div class="msg_form_column msg_form_column-left">
+											<div class="msg_form_field">
+												<label class="msg_form_field_label">Title</label>
+												<input type="text" class="msg_form_field_input " name="title" id="post_title" value="<%= title %>" >
+												<span class="msg_form_field_text_error ">Error</span>
+											</div>
+											<div class="msg_form_field">
+												<label class="msg_form_field_label">Name</label>
+												<input type="text" class="msg_form_field_input"  name="name" id="post_name" value="<%= name %>">
+												<span class="msg_form_field_text_error">Error</span>
+												<div class="validation-error"></div>
+											</div>
+										</div>
+										<div class="msg_form_column msg_form_column-right">
+											<div class="msg_form_field">
+												<label class="msg_form_field_label">Message</label>
+												<textarea class="msg_form_field_textarea"  name="message" id="post_message" value="<%= message %>"><%= message %></textarea>
+												<span class="msg_form_field_text_error">Error</span>
+											</div>
+										</div>
+									</div>
+									<div class="msg_form_btns">
+										<span class="msg_btn msg_btn-delete">Delete</span>
+										<span class="msg_btn msg_btn-submit"><a href="" id="submit_link"> Submit </a></span>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+</div>

@@ -4,7 +4,8 @@ class BackboneTest.Views.Posts.NewView extends Backbone.View
   template: JST["backbone/templates/posts/new"]
 
   events:
-    "submit #new-post": "save"
+    "submit #new-post": "save",
+    "click #submit_link": "save"
 
   constructor: (options) ->
     super(options)

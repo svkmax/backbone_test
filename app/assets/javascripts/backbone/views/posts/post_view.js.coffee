@@ -4,9 +4,10 @@ class BackboneTest.Views.Posts.PostView extends Backbone.View
   template: JST["backbone/templates/posts/post"]
 
   events:
-    "click .destroy" : "destroy"
+    "click .destroy" : "destroy",
+    "click .message_item" : "show"
 
-  tagName: "tr"
+  tagName: "div"
 
   destroy: () ->
     @model.destroy()
@@ -15,5 +16,9 @@ class BackboneTest.Views.Posts.PostView extends Backbone.View
     return false
 
   render: ->
+    @$el.html(@template(@model.toJSON() ))
+    return this
+
+  show: ->
     @$el.html(@template(@model.toJSON() ))
     return this

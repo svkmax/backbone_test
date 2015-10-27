@@ -5,6 +5,7 @@ class BackboneTest.Models.Post extends Backbone.Model
     title: ''
     name: ''
     message: ''
+    created_at: ''
 
   validate: (attrs) ->
     errors = []
