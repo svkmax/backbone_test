@@ -16,9 +16,6 @@ class BackboneTest.Views.Posts.NewView extends Backbone.View
 
   save: (e) ->
     e.preventDefault()
-    e.stopPropagation()
-
-    @model.unset("errors")
 
     @collection.create(@model.toJSON(),
       success: (post) =>
@@ -27,7 +24,11 @@ class BackboneTest.Views.Posts.NewView extends Backbone.View
 
       error: (post, jqXHR) =>
         @model.set({errors: $.parseJSON(jqXHR.responseText)})
-    )
+    ) if @model.isValid()
+    this.handleError(@model, @model.validationError) unless @model.isValid()
+
+  handleError: (model, errors) =>
+    $(".validation-error").html("✗ " + _.pluck(errors, 'message').join(" ") )
 
   render: ->
     @$el.html(@template(@model.toJSON() ))

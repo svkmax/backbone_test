@@ -9,12 +9,15 @@ class BackboneTest.Views.Posts.EditView extends Backbone.View
   update: (e) ->
     e.preventDefault()
     e.stopPropagation()
-
+    this.handleError(@model, @model.validationError) unless @model.isValid()
     @model.save(null,
       success: (post) =>
         @model = post
         window.location.hash = "/#{@model.id}"
-    )
+    ) if @model.isValid()
+
+  handleError: (model, errors) =>
+    $(".validation-error").html("✗ " + _.pluck(errors, 'message').join(" ") )
 
   render: ->
     @$el.html(@template(@model.toJSON() ))

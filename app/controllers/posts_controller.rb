@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_filter :set_post, only: [:update, :show]
 
   def index
     @posts = Post.all
@@ -9,21 +10,29 @@ class PostsController < ApplicationController
   end
 
   def update
-
+    render @post.update(create_params) ? { json: @post } : { json: @post.reload,
+                                                                   status: :unprocessable_entity }
   end
 
   def create
     post = Post.new(create_params)
-    post.save
-    render json: post
+    render post.save ? {json: post } : { json: post.errors, status: 422 }
   end
 
   def show
-    render json: Post.find(params[:id])
+    render json: @post
   end
 
+  def destroy
+    render json: @post.delete ? { status: :ok } : { status: 418 }
+  end
+
+  private
   def create_params
     params.require(:post).permit(:name, :message, :title)
   end
 
+  def set_post
+    @post = Post.find(params[:id])
+  end
 end

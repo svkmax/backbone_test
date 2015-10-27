@@ -1,19 +1,20 @@
 <h1>New post</h1>
 
 <form id="new-post" name="post">
+<div class="validation-error"></div>
   <div class="field">
     <label for="title"> title:</label>
-    <input type="text" name="title" id="title" value="<%= title %>" >
+    <input type="text" name="title" id="post_title" value="<%= title %>" >
   </div>
 
   <div class="field">
     <label for="name"> name:</label>
-    <input type="text" name="name" id="name" value="<%= name %>" >
+    <input type="text" name="name" id="post_name" value="<%= name %>" >
   </div>
 
   <div class="field">
     <label for="message"> message:</label>
-    <input type="text" name="message" id="message" value="<%= message %>" >
+    <input type="text" name="message" id="post_message" value="<%= message %>" >
   </div>
 
   <div class="actions">

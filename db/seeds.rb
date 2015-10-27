@@ -6,8 +6,6 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Post.create([{
-                 name: "first message",
-                 title: "The first message!!",
-                 message: "Here is the first message content"
-             }])
+100.times do
+  FactoryGirl.create(:post)
+end
